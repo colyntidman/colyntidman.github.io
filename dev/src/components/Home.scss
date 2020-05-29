@@ -1,0 +1,23 @@
+@keyframes fadein {
+    0% { opacity:0 ; }
+    66% { opacity:0; }
+    80% { opacity: 0; }
+    100% { opacity:1; }
+}
+
+.dp-home {
+    font-family: "Space Mono", monospace, sans-serif;
+    margin: 0 auto;
+
+    @media screen and (min-width: $screen-sm-min) {
+        width: 1024px;
+    }
+
+    .dp-introduction {
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $screen-sm-min) {
+            margin-bottom: 60px;
+        }
+    }
+}

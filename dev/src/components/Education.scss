@@ -1,0 +1,186 @@
+.ci-editor-spacer {
+  margin-left: 25px;
+}
+
+.dp-education {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  font-size: 15px;
+
+  span {
+    color: white;
+  }
+
+  // Technical skills
+  .dp-technical-skills {
+    margin-top: 65px;
+  }
+
+  ul
+  {
+    list-style-type:none;
+    margin-top:-10px;
+    max-width:370px;
+    padding:0;
+  }
+}
+
+.code {
+  position: relative;
+  //width: 490px;
+  height: auto;
+  border-radius: 6px;
+  z-index: 5;
+  font-size: 15px;
+
+  .dp-editor-header {
+    display: grid;
+    grid-template-columns: 36px auto 36px;
+    align-items: center;
+
+    svg {
+      margin: 10px;
+      font-size: 15px;
+      color: #C5C8D4;
+    }
+    h1 {
+      font-family: Lato, sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1.57px;
+      color: #C5C8D4;
+      margin: 0;
+    }
+  }
+
+  &-html {
+    margin-right: 40px;
+  }
+
+  .code-content {
+    margin: 0;
+    color: white;
+    .c-r { color: #A88038 }
+    .c-o { color: #DE7300 }
+    .c-y { color: #DE7300 }
+    .c-j { color: $dark }
+    .c-g { color: #74B087 }
+    .c-p { color: #9F8198 }
+    .c-b { color: #7A99AD }
+    .c-c { color: #909090 }
+
+    @media screen and (min-width: $screen-sm-min) {
+      margin: 0 10px 10px;
+    }
+
+    .dp-link {
+      color: #7A99AD;
+      font-weight: normal;
+      font-family: "Space Mono", monospace, sans-serif;
+      font-size: 14px;
+      text-decoration: underline;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+  }
+
+  &-css {
+    .code-content code {
+      .line {
+
+
+
+        &-5 {
+          border-color: transparent;
+
+        }
+        &-2 {
+          margin-left: 2rem;
+        }
+        &-3, &-4, &-5 {
+          margin-left: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.braclet-open:after {
+  content: "{";
+}
+
+.braclet-close:after {
+  content: "}";
+  color: #DE7300;
+}
+
+// Animations
+.fade-in-left {
+  animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-left
+ * ----------------------------------------
+ */
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Animations end
+
+.dp-section-education {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+
+  @media screen and (min-width: $screen-sm-min) {
+    flex-direction: row;
+    margin: 30px 0;
+  }
+
+  .dp-cursor {
+    color: $purple;
+  }
+
+  .dp-education-item {
+    margin-bottom: 30px;
+  }
+
+  .code {
+    animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 1s;
+
+    @media screen and (min-width: $screen-sm-min) {
+      margin-right: 40px;
+    }
+  }
+
+  .dp-technical-skills {
+    &-list {
+      animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      animation-delay: 3s;
+    }
+  }
+}
+
+.dp-code-spacer {
+  margin-left: 20px;
+}
+
+.dp-work-experience-job-description {
+  max-width: 590px;
+
+  &-list {
+    margin-left: 20px;
+  }
+}

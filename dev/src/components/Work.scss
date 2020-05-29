@@ -1,0 +1,23 @@
+@import '../style/variables';
+
+.dp-work {
+  .dp-cursor {
+    color: $purple;
+  }
+}
+
+.dp-work-experience {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-list {
+    //ToDo: Animation mixin nutzen, um second-colum zu löschen
+    animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 1s;
+
+    &.second-column {
+      animation-delay: 1.9s;
+      margin-top: 76px;
+    }
+  }
+}

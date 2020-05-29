@@ -1,0 +1,46 @@
+// Mixin for shadow button with block sliding up
+@mixin btn-split($color, $borderColor: $color, $borderWidth: 2px) {
+  position: relative;
+
+  padding: 0.25em 0.5em;
+
+  color: $color;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    border: $borderWidth solid $borderColor;
+    transition: transform 0.3s ease-in;
+  }
+
+  &:hover {
+
+    &:before,
+    &:after {
+      transition: transform 0.3s ease-out;
+    }
+
+    &:before {
+      transform: translate3d(-$borderWidth - 1px, $borderWidth + 1px, 0);
+    }
+
+    &:after {
+      transform: translate3d($borderWidth + 1px, -$borderWidth - 1px, 0);
+    }
+  }
+}
+
+@mixin transition {
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * .5}s;
+    }
+  }
+}

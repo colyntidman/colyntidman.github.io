@@ -1,0 +1,49 @@
+.dp-projects-page {
+//ToDo: mit dp-work global einreichen
+  .dp-cursor {
+    color: $purple;
+  }
+}
+
+.dp-projects {
+  display: flex;
+  max-width: 1250px;
+  flex-direction: column;
+
+  .dp-project-img {
+    margin-bottom: 20px;
+  }
+}
+
+.dp-projects-list-item {
+  @include transition;
+  animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
+  margin-bottom: 35px;
+  padding: 20px 0;
+  //width: 350px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &-text {
+    display: flex;
+  }
+
+  &-icon {
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    margin-right: 15px;
+    color: $white;
+  }
+
+  &-link {
+    cursor: pointer;
+  }
+}
